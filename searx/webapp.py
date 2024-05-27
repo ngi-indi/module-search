@@ -634,6 +634,18 @@ def search():
     # Server-Timing header
     request.timings = result_container.get_timings()
 
+    f = open("res.json", "w")
+    f.write(json.dumps({'query': search_query.query,
+                                    'number_of_results': number_of_results,
+                                    'results': results,
+                                    'answers': list(result_container.answers),
+                                    'corrections': list(result_container.corrections),
+                                    'infoboxes': result_container.infoboxes,
+                                    'suggestions': list(result_container.suggestions),
+                                    'unresponsive_engines': __get_translated_errors(result_container.unresponsive_engines)},  # noqa
+                                   default=lambda item: list(item) if isinstance(item, set) else item, indent=4))
+    f.close()
+
     # output
     for result in results:
         if output_format == 'html':
