@@ -85,6 +85,9 @@ from searx.answerers import ask
 from searx.metrology.error_recorder import errors_per_engines
 from searx.settings_loader import get_default_settings_path
 
+from urlreader import UrlReader
+from copy import deepcopy
+
 # serve pages with HTTP/1.1
 from werkzeug.serving import WSGIRequestHandler
 WSGIRequestHandler.protocol_version = "HTTP/{}".format(settings['server'].get('http_protocol_version', '1.0'))
@@ -645,6 +648,16 @@ def search():
                                     'unresponsive_engines': __get_translated_errors(result_container.unresponsive_engines)},  # noqa
                                    default=lambda item: list(item) if isinstance(item, set) else item, indent=4))
     f.close()
+    results_with_content = deepcopy(results)
+    url_reader = UrlReader()
+    for result in results_with_content:
+        result['content'] = url_reader.get_content(result['url'])
+
+    f = open('res_with_content.json', 'w')
+    f.write(json.dumps(results_with_content, default=lambda item: list(item) if isinstance(item, set) else item, indent=4))
+    f.close()   
+
+
 
     # output
     for result in results:
