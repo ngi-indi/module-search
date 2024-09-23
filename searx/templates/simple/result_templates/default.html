@@ -17,8 +17,14 @@
    {%- endif %}
   {%- if result.prediction %}
       <div class="label-biased" style="background-color: #D9EDF7; color: #31708F; padding: 5px; border-radius: 5px; margin: 5px 0px;">
-            Possible bias detected. Please review critically.
+            Possible bias detected with confidence {{ (result.score * 100) | round(2) }}%. Please review critically.
       </div>
+  {%- else %}
+      {% if searchmode == '1' or searchmode == '2' %}
+          <div class="label-unbiased" style="background-color: #f8f5f6; color: #31708F; padding: 5px; border-radius: 5px; margin: 5px 0px;">
+                Bias detected with confidence {{ (result.score * 100) | round(2) }}%. You might trust it more.
+          </div>
+      {%- endif %}
   {%- endif %}
 {%- else %}
   <p class="content empty_element">

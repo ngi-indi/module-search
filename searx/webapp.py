@@ -704,7 +704,6 @@ def search():
     if search_query.redirect_to_first_result and results:
         return redirect(results[0]['url'], 302)
 
-    print('Searchmode', request.form.get('searchmode'))
     for result in results:
         if output_format == 'html':
             content = result['content'][:4092]
@@ -713,11 +712,12 @@ def search():
                 if '—' in content:
                     date = content.split('—')[0].strip()
                     text = content.split('—')[1].strip()
-                    result['prediction'], result['explanation'] = predict_and_explain(text)
+                    result['prediction'], result['score'], result['explanation'] = predict_and_explain(text)
                     result['explanation'] = date +  ' — ' + result['explanation']
                 else:
-                    result['prediction'], result['explanation'] = predict_and_explain(content, task=request.form.get('bias') or request.args.get('bias', 'cognitive-bias'))
-
+                    result['prediction'], result['score'], result['explanation'] = predict_and_explain(content, task=request.form.get('bias') or request.args.get('bias', 'cognitive-bias'))
+                if result['prediction'] == 0:
+                    result['score'] = 1 - result['score']
             if 'content' in result and result['content']:
                 result['content'] = highlight_content(escape(content), search_query.query)
             if 'title' in result and result['title']:
@@ -732,6 +732,10 @@ def search():
                 result['publishedDate'] = None
             else:
                 result['publishedDate'] = webutils.searxng_l10n_timespan(result['publishedDate'])
+
+        # sort results by bias score (unbiased results first)
+        if int(request.form.get('searchmode', 0)) > 1:
+            results = sorted(results, key=lambda r: r.get('score', 0))
 
         # set result['open_group'] = True when the template changes from the previous result
         # set result['close_group'] = True when the template changes on the next result
