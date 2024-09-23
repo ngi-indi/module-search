@@ -1,0 +1,45 @@
+<select class="bias" id="bias" name="bias" aria-label="{{ _('Inspect bias') }}">
+
+  <option value="cognitive-bias"
+          title="A systematic error in thinking that affects the decisions and judgments people make. Example: Confirmation bias - People favor information that confirms their pre-existing beliefs."
+          {%- if current_bias == 'cognitive-bias' %} selected="selected" {%- endif -%}>
+          {{ _('Cognitive Bias') }} [cognitive-bias]
+  </option>
+
+  <option value="fake-news"
+          title="Deliberate misinformation or hoaxes spread via traditional news media or online. Example: A fabricated news story about a celebrity death that gains widespread attention due to sensationalism."
+          {%- if current_bias == 'fake-news' %} selected="selected" {%- endif -%}>
+          {{ _('Fake News') }} [fake-news]
+  </option>
+
+  <option value="gender-bias"
+          title="The preference or prejudice toward one gender over the other. Example: Assuming a woman is not suitable for a leadership role based on stereotypes about emotional decision-making."
+          {%- if current_bias == 'gender-bias' %} selected="selected" {%- endif -%}>
+          {{ _('Gender Bias') }} [gender-bias]
+  </option>
+
+  <option value="hate-speech"
+          title="Speech that attacks a person or group based on attributes such as race, religion, ethnic origin, or gender. Example: Using racial slurs in a public forum to denigrate a particular ethnic group."
+          {%- if current_bias == 'hate-speech' %} selected="selected" {%- endif -%}>
+          {{ _('Hate Speech') }} [hate-speech]
+  </option>
+
+  <option value="linguistic-bias"
+          title="Bias in language that subtly influences perception. Example: Using academic or complex language in a way that excludes certain audiences, making information less accessible to non-experts."
+          {%- if current_bias == 'linguistic-bias' %} selected="selected" {%- endif -%}>
+          {{ _('Linguistic Bias') }} [linguistic-bias]
+  </option>
+
+  <option value="political-bias"
+          title="Favoring or opposing a political party or ideology in a way that influences judgment. Example: Media coverage that disproportionately highlights the successes of one political party while downplaying those of another."
+          {%- if current_bias == 'political-bias' %} selected="selected" {%- endif -%}>
+          {{ _('Political Bias') }} [political-bias]
+  </option>
+
+  <option value="racial-bias"
+          title="Prejudice or preferential treatment based on race. Example: A study showing that job applicants with 'white-sounding' names receive more callbacks than those with 'ethnic-sounding' names."
+          {%- if current_bias == 'racial-bias' %} selected="selected" {%- endif -%}>
+          {{ _('Racial Bias') }} [racial-bias]
+  </option>
+
+</select>

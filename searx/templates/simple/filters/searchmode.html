@@ -1,0 +1,5 @@
+<select  name="searchmode" id="searchmode" class="searchmode" aria-label="{{ _('SearchMode') }}">
+    <option value="0" {% if searchmode == '0' or searchmode == '-1' %}selected="selected"{% endif %} aria-label="{{ _('traditional') }}">{{ _("SearchMode") + ": " + _('Traditional') }}</option>
+    <option value="1" {% if searchmode == '1' %}selected="selected"{% endif %} aria-label="{{ _('only-detection') }}">{{ _("SearchMode") + ": " + _('Only detection') }}</option>
+    <option value="2" {% if searchmode == '2' %}selected="selected"{% endif %} aria-label="{{ _('detection-and-re-ranking') }}">{{ _("SearchMode") + ": " + _('Detection and re-ranking') }}</option>
+</select>
