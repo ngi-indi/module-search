@@ -23,8 +23,6 @@
 - [License](#license)
 - [Contact](#contact)
 
----
-
 ## Installation
 
 ### Prerequisites
