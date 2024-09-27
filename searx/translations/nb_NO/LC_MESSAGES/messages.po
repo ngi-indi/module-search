@@ -621,11 +621,11 @@ msgid "Preferences"
 msgstr "Innstillinger"
 
 #: searx/templates/simple/base.html:68
-msgid "Powered by"
+msgid "INDI is powered by"
 msgstr "Drevet av"
 
 #: searx/templates/simple/base.html:68
-msgid "a privacy-respecting, open metasearch engine"
+msgid "a privacy-centric, transparent, and open-source search engine driven by debiasing, explainability, and anonymity"
 msgstr "en åpen metasøkemotor som respekterer personvernet"
 
 #: searx/templates/simple/base.html:69

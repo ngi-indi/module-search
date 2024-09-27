@@ -142,7 +142,6 @@ class InfoPageSet:  # pylint: disable=too-few-public-methods
         """list of supported languages (aka locales)"""
 
         self.toc: typing.List[str] = [
-            'search-syntax',
             'about',
             'donate',
         ]

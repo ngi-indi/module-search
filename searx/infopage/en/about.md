@@ -1,79 +1,44 @@
-# About SearXNG
+# About INDI
 
-SearXNG is a [metasearch engine], aggregating the results of other
-{{link('search engines', 'preferences')}} while not storing information about
-its users.
+**INDI** (Improve Privacy and Trust in Non-Personalized Information Discovery) is an open-source search engine designed to enhance privacy, transparency, and trust in online search results. Funded by the **European Union** under the **NGI Search project**, INDI aims to address significant issues in traditional search engines, including bias, privacy invasion, and a lack of transparency in result ranking.
 
-The SearXNG project is driven by an open community, come join us on Matrix if
-you have questions or just want to chat about SearXNG at [#searxng:matrix.org]
+The INDI project is a collaboration between the **University of Cagliari** and **R2M Solution**. Together, these partners are working to provide a solution that offers **non-personalized**, **debiased**, and **explainable** search results, ensuring that users' privacy is fully protected.
 
-Make SearXNG better.
+## Why use INDI?
 
-- You can improve SearXNG translations at [Weblate], or...
-- Track development, send contributions, and report issues at [SearXNG sources].
-- To get further information, visit SearXNG's project documentation at [SearXNG
-  docs].
+- **Privacy-focused**: INDI doesn't track your search behavior or create personalized profiles. Your search queries are anonymized, and no personal data is stored or shared.
+- **Bias-free results**: INDI applies advanced **artificial intelligence** and **natural language processing** techniques to detect and mitigate bias in search results, giving users access to more diverse perspectives.
+- **Transparency**: INDI provides explanations for why specific results are shown, making the search process more transparent and accountable.
+- **Open-source**: The INDI platform is fully open-source, encouraging community contributions and allowing users to run their own instances if desired.
 
-## Why use it?
+If you care about **privacy**, **unbiased information**, and **digital transparency**, INDI is the search engine for you. Whether you use it as your default search engine or run your own instance, INDI provides an alternative to the commercial, data-driven search platforms that dominate the web.
 
-- SearXNG may not offer you as personalized results as Google, but it doesn't
-  generate a profile about you.
-- SearXNG doesn't care about what you search for, never shares anything with a
-  third-party, and it can't be used to compromise you.
-- SearXNG is free software, the code is 100% open, and everyone is welcome to
-  make it better.
+## How INDI works
 
-If you do care about privacy, want to be a conscious user, or otherwise believe
-in digital freedom, make SearXNG your default search engine or run it on your
-own server!
+INDI combines the power of **meta-search** technology with **bias detection** algorithms to provide search results from multiple sources while protecting your privacy. The system ranks these results based on bias, transparency, and inclusivity, ensuring that users see less biased, more relevant information.
 
-## How do I set it as the default search engine?
+The INDI system relies on:
+- **Bias classification** to detect bias in search results.
+- **Re-rankings** to prioritize less biased, diverse perspectives.
+- **Explanations** to help users understand why content is being shown.
 
-SearXNG supports [OpenSearch].  For more information on changing your default
-search engine, see your browser's documentation:
+## Empowering the community
 
-- [Firefox]
-- [Microsoft Edge] - Behind the link, you will also find some useful instructions
-  for Chrome and Safari.
-- [Chromium]-based browsers only add websites that the user navigates to without
-  a path.
+INDI also features a **crowdsourcing platform** that allows human reviewers to validate bias snippets from search results, ensuring inclusiveness and transparency. Using **blockchain technology**, INDI rewards reviewers with **crypto-assets** for their contributions, promoting a decentralized, collaborative ecosystem.
 
-When adding a search engine, there must be no duplicates with the same name.  If
-you encounter a problem where you cannot add the search engine, you can either:
+By contributing as a reviewer, you can help make the internet a more transparent and unbiased place.
 
-- remove the duplicate (default name: SearXNG) or
-- contact the owner to give the instance a different name than the default.
+## Join the movement
 
-## How does it work?
+INDI is part of a broader effort to challenge the status quo in online information discovery. By addressing issues like bias, privacy invasion, and opaque search processes, INDI is reshaping how people find and trust the information they need.
 
-SearXNG is a fork from the well-known [searx] [metasearch engine] which was
-inspired by the [Seeks project].  It provides basic privacy by mixing your
-queries with searches on other platforms without storing search data.  SearXNG
-can be added to your browser's search bar; moreover, it can be set as the
-default search engine.
+Become part of the INDI community:
+- **Join our open-source initiative**: contribute to the code, report issues, or share ideas to improve the platform.
+- **Run your own INDI instance**: host your version of the search engine to ensure complete control over your search experience.
+- **Contribute as a reviewer**: help flag biased content and participate in validating search results.
 
-The {{link('stats page', 'stats')}} contains some useful anonymous usage
-statistics about the engines used.
+## Get started with INDI
 
-## How can I make it my own?
+To learn more about the INDI project and how to contribute, visit our project documentation or connect with us by e-mail.
 
-SearXNG appreciates your concern regarding logs, so take the code from the
-[SearXNG sources] and run it yourself!
-
-Add your instance to this [list of public
-instances]({{get_setting('brand.public_instances')}}) to help other people
-reclaim their privacy and make the internet freer.  The more decentralized the
-internet is, the more freedom we have!
-
-
-[SearXNG sources]: {{GIT_URL}}
-[#searxng:matrix.org]: https://matrix.to/#/#searxng:matrix.org
-[SearXNG docs]: {{get_setting('brand.docs_url')}}
-[searx]: https://github.com/searx/searx
-[metasearch engine]: https://en.wikipedia.org/wiki/Metasearch_engine
-[Weblate]: https://translate.codeberg.org/projects/searxng/
-[Seeks project]: https://beniz.github.io/seeks/
-[OpenSearch]: https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md
-[Firefox]: https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox
-[Microsoft Edge]: https://support.microsoft.com/en-us/help/4028574/microsoft-edge-change-the-default-search-engine
-[Chromium]: https://www.chromium.org/tab-to-search
+INDI is the search engine for a **more private**, **debiased**, and **transparent** internet. Join us in this mission today.
